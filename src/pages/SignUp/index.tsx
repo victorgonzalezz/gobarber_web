@@ -3,7 +3,8 @@ import { FiArrowLeft, FiMail, FiUser, FiLock } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
-import getValidationErrors from '../../Utils/getValidationErrors';
+
+import getValidationErrors from '../../utils/getValidationErrors';
 
 import logoImg from '../../assets/logo.svg';
 
@@ -14,7 +15,6 @@ import { Container, Content, Background } from './styles';
 
 const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
-
   const handleSubmit = useCallback(async (data: object) => {
     try {
       const schema = Yup.object().shape({
